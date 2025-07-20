@@ -1,113 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NovaAI - Smarter AI Solutions</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-      .logo-hover:hover {
-        transform: rotate(5deg) scale(1.1);
-        transition: all 0.3s ease-in-out;
-      }
-      .bg-hero {
-        background-image: url('bg.gif');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-    </style>
-  </head>
-  <body class="text-white bg-gray-900">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+    }
 
-    <!-- HERO -->
-    <section class="min-h-screen flex items-center justify-center bg-hero relative">
-      <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-      <div class="relative z-10 text-center px-6 md:px-12">
-        <div class="flex items-center justify-center space-x-3 mb-6">
-          <img src="logo.png" alt="NovaAI Logo" class="w-10 h-10 logo-hover">
-          <h1 class="text-4xl font-extrabold tracking-wide">NovaAI</h1>
-        </div>
-        <p class="text-xl md:text-2xl max-w-2xl mx-auto">Smarter AI tools for modern teams. Automate, analyze, and accelerate your work.</p>
-        <button class="mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-white font-medium transition">Get Started Free</button>
-      </div>
-    </section>
+    .bg-hero {
+      background-image: url('bg.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-    <!-- FEATURES -->
-    <section class="py-16 px-6 md:px-12 bg-gray-900">
-      <h2 class="text-3xl font-bold text-center mb-12">Powerful Features</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-800 p-6 rounded-lg text-center">
-          <div class="text-blue-500 text-4xl mb-4">⚡</div>
-          <h3 class="text-xl font-semibold mb-2">Real-Time Automation</h3>
-          <p>Automate repetitive tasks instantly with smart triggers.</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg text-center">
-          <div class="text-green-400 text-4xl mb-4">📊</div>
-          <h3 class="text-xl font-semibold mb-2">Advanced Analytics</h3>
-          <p>Gain deep insights through data-driven dashboards.</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg text-center">
-          <div class="text-purple-400 text-4xl mb-4">🔒</div>
-          <h3 class="text-xl font-semibold mb-2">Secure Infrastructure</h3>
-          <p>End-to-end encryption ensures your data stays safe.</p>
-        </div>
-      </div>
-    </section>
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
 
-    <!-- PRICING -->
-    <section class="py-16 px-6 md:px-12 bg-gray-950">
-      <h2 class="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
-      <div class="grid md:grid-cols-3 gap-8 text-center">
-        <div class="bg-gray-800 p-6 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">Free</h3>
-          <p class="text-3xl font-bold mb-4">$0</p>
-          <p>Basic tools and access to limited features.</p>
-          <button class="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full">Choose Free</button>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg border-2 border-blue-500">
-          <h3 class="text-xl font-semibold mb-2">Pro</h3>
-          <p class="text-3xl font-bold mb-4">$12/mo</p>
-          <p>Access to advanced AI tools and more integrations.</p>
-          <button class="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full">Choose Pro</button>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">Business</h3>
-          <p class="text-3xl font-bold mb-4">$49/mo</p>
-          <p>Custom solutions and dedicated support for teams.</p>
-          <button class="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full">Choose Business</button>
-        </div>
-      </div>
-    </section>
+    .content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      text-align: center;
+    }
 
-    <!-- TESTIMONIALS -->
-    <section class="py-16 px-6 md:px-12 bg-gray-900">
-      <h2 class="text-3xl font-bold text-center mb-12">What People Say</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-800 p-6 rounded-lg">
-          <p>"NovaAI has changed the way we work. The automation is next-level."</p>
-          <p class="mt-4 text-sm text-gray-400">— Amina, Product Manager</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg">
-          <p>"Simple, fast, and powerful. Love the UI and the insights it gives."</p>
-          <p class="mt-4 text-sm text-gray-400">— Luis, Data Analyst</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg">
-          <p>"We boosted productivity by 40% using NovaAI. Incredible ROI."</p>
-          <p class="mt-4 text-sm text-gray-400">— Jade, CTO</p>
-        </div>
-      </div>
-    </section>
+    .logo-hover {
+      transition: transform 0.3s ease;
+    }
 
-    <!-- FOOTER -->
-    <footer class="py-6 px-6 md:px-12 bg-gray-950 text-center">
-      <p class="mb-4">&copy; 2025 NovaAI. All rights reserved.</p>
-      <div class="flex justify-center space-x-4 text-gray-400">
-        <a href="#" class="hover:text-white">Twitter</a>
-        <a href="#" class="hover:text-white">LinkedIn</a>
-        <a href="#" class="hover:text-white">GitHub</a>
-      </div>
-    </footer>
+    .logo-hover:hover {
+      transform: scale(1.2);
+    }
 
-  </body>
+    .button {
+      background-color: #00FFFF;
+      color: #000;
+      font-weight: bold;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #00cccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <img src="logo.png" alt="NovaAI Logo" class="w-10 h-10 logo-hover mx-auto mb-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">NovaAI</h1>
+      <p class="text-xl md:text-2xl mb-8">Unleashing Creativity Through Artificial Intelligence</p>
+      <a href="#portfolio" class="button inline-block">Explore Portfolio</a>
+    </div>
+  </div>
+
+  <section id="portfolio" class="py-20 bg-black text-white text-center">
+    <h2 class="text-3xl md:text-5xl font-bold mb-8">Our Work</h2>
+    <p class="max-w-3xl mx-auto text-lg md:text-xl">From stunning visual effects to mind-blowing AI-generated art, explore how NovaAI transforms imagination into reality. Dive into a portfolio that blurs the line between code and creativity.</p>
+  </section>
+</body>
 </html>
